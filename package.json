@@ -1,15 +1,26 @@
 {
-  "name": "my-vue-library",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@monukanyal/multiple-tag",
+  "version": "0.0.1",
+  "description": "A library for multiple email tag input field",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monukanyaldev/multiple-tag.git"
+  },
+  "bugs": {
+    "url": "https://github.com/monukanyaldev/multiple-tag/issues"
+  },
+  "main": "./dist/multipleTag.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "build-bundle": "vue-cli-service build --target lib --name multipleTag ./src/index.js",
+    "lint": "vue-cli-service lint --fix"
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vuelidate": "^0.7.5"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.4.0",
@@ -18,8 +29,23 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "@fortawesome/fontawesome-free": "^5.13.0"
   },
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*",
+    "*.json",
+    "*.js"
+  ],
+  "keywords": [
+    "multiple-email-tag",
+    "multiple-tags",
+    "tags"
+  ],
+  "homepage": "https://github.com/monukanyaldev/multiple-tag#readme",
+  "author": "Monu kanyal",
   "eslintConfig": {
     "root": true,
     "env": {
