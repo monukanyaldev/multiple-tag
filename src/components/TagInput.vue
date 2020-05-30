@@ -1,7 +1,7 @@
 <template>
     <div class="box">
     <div class="tag-container" :class="{invalid:isInvalid}">
-      <input @keyup="tagkeyUpChange" placeholder="multiple email address separated with comma"/>
+      <input @keyup="tagkeyUpChange"/>
     </div>
     </div>
 </template>
@@ -66,6 +66,7 @@ export default {
       })
     },
     tagkeyUpChange (e) {
+      this.validateCompleteInput(e)
       if (e.target.value !== '') {
         // (e.key === 'Enter')
         if (e.target.value.endsWith(',')) {
@@ -84,8 +85,19 @@ export default {
         }
       }
     },
+    validateCompleteInput (e) {
+      if (e.target.value.length > 0) {
+        if (!email(e.target.value)) {
+          this.invalid = true
+          return false
+        }
+        this.invalid = false
+      } else {
+        this.invalid = false
+        return false
+      }
+    },
     removeEmail (e) {
-      console.log('clicked')
       if (e.target.tagName === 'I') {
         const tagLabel = e.target.getAttribute('data-item')
         const index = this.emails.indexOf(tagLabel)
@@ -105,6 +117,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
+  align-items: center;
   padding: 6px;
   overflow-x: scroll;
 }
@@ -123,9 +136,8 @@ export default {
 }
 .tag i {
   font-size: 16px;
-  /* color: #666; */
-  color: #fff;
-  background-color: #6c757d;
+  color: rgba(0, 0, 0, 0.2);
+
   margin-left: 5px;
 }
 .tag-container input {
@@ -136,6 +148,7 @@ export default {
   font-family: 'Rubik';
   color: #333;
   flex: 1;
+  margin: 0;
 }
 
 </style>

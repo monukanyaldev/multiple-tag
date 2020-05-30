@@ -1,25 +1,5 @@
 # my-vue-library
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
 ## Installation and Usage
 1. Just use `npm install --save @monukanyal/multiple-tag`
 2. next step:
