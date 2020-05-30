@@ -1,6 +1,6 @@
 {
   "name": "@monukanyal/multiple-tag",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A library for multiple email tag input field",
   "license": "MIT",
   "repository": {
@@ -40,9 +40,12 @@
     "*.js"
   ],
   "keywords": [
-    "multiple-email-tag",
-    "multiple-tags",
-    "tags"
+    "javascript",
+    "vue",
+    "tags",
+    "multiple-email-input",
+    "multiple-email",
+    "vue-component"
   ],
   "homepage": "https://github.com/monukanyaldev/multiple-tag#readme",
   "author": "Monu kanyal",
